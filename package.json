@@ -1,0 +1,20 @@
+{
+  "name": "ammar-mansuri",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd pizzariaserver && npm install && cd ../pizzeriaapp && npm install",
+    "start": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,green\" \"npm run server\" \"npm run client\"",
+    "server": "cd pizzariaserver && npm run dev",
+    "client": "cd pizzeriaapp && npm run dev",
+    "server-only": "cd pizzariaserver && npm run dev",
+    "client-only": "cd pizzeriaapp && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
